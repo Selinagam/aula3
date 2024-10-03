@@ -1,21 +1,56 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atividade3tri</title>
+    <title>trabalho</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: black;
+            color:fuchsia
+           
+        }
+        button {
+            margin: 5px 0;
+            color: black;
+            background-color: fuchsia;
+         }
+     input {
+         margin: 5px 0;
+         color: black;
+         background-color: fuchsia;
+     }
+    h1 {
+       text-aling: center; 
+    }
+   
+    </style>
 </head>
 <body>
-    <h1>Testar</h1>
-    <div id="PA"></div>
+    <h1>Tabuada</h1>
+    <var for="numero">Digite um número:</var>
+    <input type="number" id="numero" required>
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <h2>Resultados:</h2>
+    <pre id="resultado"></pre>
+
     <script>
-        var a=0
-        var PA=document.getElementById("PA")
-        while(a>10){
-            PA.innerHTML +=a+ "<br>"
-            a--
+        function gerarTabuada() {
+            const numero = document.getElementById('numero').value;
+            let resultado = '';
+            let i = 1;
+
+            while (i <= 10) {
+                resultado += ${numero} x ${i} = ${numero * i}\n;
+                i++;
+            }
+
+            document.getElementById('resultado').textContent = resultado;
         }
     </script>
+    <h1>Advinhe o numero</h1>
+    
 </body>
 </html>
